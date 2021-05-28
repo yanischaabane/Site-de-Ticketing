@@ -3,7 +3,7 @@
  <article>
  <header>
  <a href="<?= "ticket/index/" . $this->nettoyer($ticket['id']) ?>">
- <h1 class="titreTicket"><?= $this->nettoyer($ticket['titre'])?> | Statut : <?= $this->nettoyer($ticket['niveau'])?></h1>
+ <h1 class="titreTicket"><?= $this->nettoyer($ticket['titre'])?> | Niveau : <?= $this->nettoyer($ticket['niveau'])?></h1>
     </a>
     <time><?= $this->nettoyer($ticket['date']) ?></time>
     </header>

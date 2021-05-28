@@ -22,10 +22,10 @@ class Ticket extends Modele {
  else
     throw new Exception("Aucun ticket ne correspond à l'identifiant '$idTicket'");
  }
- public function modifystatut($idTicket,$statut){
+ public function modifyniveau($idTicket,$niveau){
    $sql = 'update T_TICKET set'.
    ' TIC_NIVEAU = ? where TIC_ID = ?';
-   $this->executerRequete($sql,array($statut,$idTicket));
+   $this->executerRequete($sql,array($niveau,$idTicket));
 }
  public function ajouterticket($titre,$contenu){
    $sql = 'insert into T_TICKET'.

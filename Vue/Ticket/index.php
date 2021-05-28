@@ -2,15 +2,15 @@
 
 <article>
  <header>
- <h1 class="titreTicket"><?= $this->nettoyer($ticket['titre']) ?> | Statut : <?= $this->nettoyer($ticket['niveau'])?></h1>
+ <h1 class="titreTicket"><?= $this->nettoyer($ticket['titre']) ?> | Niveau : <?= $this->nettoyer($ticket['niveau'])?></h1>
  <time><?= $this->nettoyer($ticket['date']) ?></time>
  </header>
  <p><?= $this->nettoyer($ticket['contenu']) ?></p>
  <h2>Mettre à jour le niveau du ticket</h2>
- <form method="post" action="ticket/changestatus">
- <select name="statut" id="statut">
-    <?php foreach ($statut as $statuts): ?>
-      <option value=<?= $this->nettoyer($statuts['id'])?>><?= $this->nettoyer($statuts['name'])?></option>
+ <form method="post" action="ticket/changeniveau">
+ <select name="niveau" id="niveau">
+    <?php foreach ($niveau as $niveaux): ?>
+      <option value=<?= $this->nettoyer($niveaux['id'])?>><?= $this->nettoyer($niveaux['name'])?></option>
     <?php endforeach; ?>
  </select>
  <br />

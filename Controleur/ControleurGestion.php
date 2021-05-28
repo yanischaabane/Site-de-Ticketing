@@ -1,31 +1,31 @@
 <?php
-require_once 'Modele/Statut.php';
+require_once 'Modele/Niveau.php';
 require_once 'Framework/Controleur.php';
 class ControleurGestion extends Controleur{
- private $statut;
+ private $niveau;
  public function __construct() {
- $this->statut = new Statut();
+ $this->niveau = new Niveau();
  }
  public function index() {
- $statuts = $this->statut->getStatut();
- $this->genererVue(array('statuts' => $statuts));
+ $niveaux = $this->niveau->getNiveau();
+ $this->genererVue(array('niveaux' => $niveaux));
  }
- public function statutadd(){
+ public function niveauadd(){
     $name = $this->requete->getParametre("name");
-    $this->statut->addstatut($name);
+    $this->niveau->addniveau($name);
     $this->executerAction("index");
 }
 
-public function statutdelete(){
+public function niveaudelete(){
     $id = $this->requete->getParametre("id");
-    $this->statut->deletestatut($id);
+    $this->niveau->deleteniveau($id);
     $this->executerAction("index");
 }
 
-public function statutupdate(){
+public function niveauupdate(){
     $id = $this->requete->getParametre("id");
     $name = $this->requete->getParametre("name");
-    $this->statut->updatestatut($id,$name);
+    $this->niveau->updateniveau($id,$name);
     $this->executerAction("index");
 }
 
