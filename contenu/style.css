@@ -1,0 +1,51 @@
+
+html, body {
+    height: 100%;
+}
+
+body {
+    color: #bfbfbf;
+    background: rgb(167, 31, 31);
+    font-family: 'Futura-Medium', 'Futura', 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    color: white;
+}
+
+.titreTicket {
+    margin-bottom : 0px;
+}
+
+#global {
+    min-height: 100%; 
+    background: rgb(167, 31, 31);
+    width: 70%;
+    margin: auto;	
+    text-align: justify;
+    padding: 5px 20px;
+}
+
+#contenu {
+    margin-bottom : 30px;
+}
+
+#titreBlog, #piedBlog {
+    text-align: center;
+}
+
+#titreReponses {
+    font-size : 100%;
+}
+
+#txtCommentaire {
+    width: 50%;
+}
+
+.link:hover { color: #00FF00; }
+
+a
+{
+text-decoration: none;
+color: rgb(139, 181, 209);
+}
